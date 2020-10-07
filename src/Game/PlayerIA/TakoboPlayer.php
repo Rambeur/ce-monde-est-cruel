@@ -42,7 +42,9 @@ class TakoboPlayer extends Player
         // -------------------------------------    -----------------------------------------------------
 
 
-        return parent::rockChoice();
+        // return parent::rockChoice();
+        // return parent::ScissorsChoice();
+        return parent::PaperChoice();
 
     }
 };
