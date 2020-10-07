@@ -42,6 +42,8 @@ class TakoboPlayer extends Player
         // -------------------------------------    -----------------------------------------------------
         // echo $this->result->getLastChoiceFor($this->opponentSide);
         // echo "\n";
+        if ($this->result->getNbRound() == 0)
+            return parent::scissorsChoice();
 
         if ($this->result->getLastChoiceFor($this->opponentSide) == 'rock')
             return parent::paperChoice();
@@ -53,7 +55,7 @@ class TakoboPlayer extends Player
 
         // return parent::rockChoice();
         // return parent::ScissorsChoice();
-        return parent::PaperChoice();
+        // return parent::PaperChoice();
 
     }
 };
