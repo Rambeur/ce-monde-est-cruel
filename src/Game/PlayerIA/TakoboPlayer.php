@@ -7,7 +7,7 @@ use Hackathon\Game\Result;
 /**
  * Class TakoboPlayers
  * @package Hackathon\PlayerIA
- * @author YOUR NAME HERE
+ * @author YAHIA Ilyes
  */
 class TakoboPlayer extends Player
 {
@@ -42,17 +42,19 @@ class TakoboPlayer extends Player
         // -------------------------------------    -----------------------------------------------------
         // echo $this->result->getLastChoiceFor($this->opponentSide);
         // echo "\n";
+
+
+
         if ($this->result->getNbRound() == 0)
             return parent::scissorsChoice();
-
         if ($this->result->getLastChoiceFor($this->opponentSide) == 'rock')
             return parent::paperChoice();
         if ($this->result->getLastChoiceFor($this->opponentSide) == 'paper')
             return parent::scissorsChoice();
         if ($this->result->getLastChoiceFor($this->opponentSide) == 'scissors')
             return parent::rockChoice();
-
-
+        
+        
         // return parent::rockChoice();
         // return parent::ScissorsChoice();
         // return parent::PaperChoice();
