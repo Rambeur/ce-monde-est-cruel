@@ -40,11 +40,20 @@ class TakoboPlayer extends Player
         // -------------------------------------    -----------------------------------------------------
         // How can i display the result of each round ? $this->prettyDisplay()
         // -------------------------------------    -----------------------------------------------------
+        // echo $this->result->getLastChoiceFor($this->opponentSide);
+        // echo "\n";
+
+        if ($this->result->getLastChoiceFor($this->opponentSide) == 'rock')
+            return parent::PaperChoice();
+        if ($this->result->getLastChoiceFor($this->opponentSide) == 'paper')
+            return parent::ScissorsChoice();
+        if ($this->result->getLastChoiceFor($this->opponentSide) == 'scissors')
+            return parent::rockChoice();
 
 
         // return parent::rockChoice();
         // return parent::ScissorsChoice();
-        return parent::PaperChoice();
+        // return parent::PaperChoice();
 
     }
 };
